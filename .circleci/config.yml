@@ -80,14 +80,18 @@ jobs:
       - store_artifacts:
           path: build
 
-  test-syntax:
+  test-other:
     docker:
-      - image: circleci/node:8.9.4
+      # need '-browsers' version to test in real (xvfb-wrapped) browsers
+      - image: circleci/node:8.9.4-browsers
     working_directory: ~/plotly.js
     steps:
       - checkout
       - attach_workspace:
           at: ~/plotly.js
+      - run:
+          name: Run bundle tests
+          command: ./.circleci/test.sh bundle
       - run:
           name: Run syntax tests
           command: ./.circleci/test.sh syntax
@@ -103,6 +107,6 @@ workflows:
       - test-image:
           requires:
             - build
-      - test-syntax:
+      - test-other:
           requires:
             - build
