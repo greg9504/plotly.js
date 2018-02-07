@@ -131,7 +131,9 @@
                     -759812.2658780153
                 ],
                 "sizeref": 10000,
-                "sizemin": 3
+                "sizemin": 5,
+                "sizemax": 60,
+                "sizedatamax": 600000
             },
             "text": [
                 "sup",

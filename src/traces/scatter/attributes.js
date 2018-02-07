@@ -302,12 +302,50 @@ module.exports = {
         sizemin: {
             valType: 'number',
             min: 0,
-            dflt: 0,
+            dflt: 8,
             role: 'style',
             editType: 'calc',
             description: [
                 'Has an effect only if `marker.size` is set to a numerical array.',
                 'Sets the minimum size (in px) of the rendered marker points.'
+            ].join(' ')
+        },
+        sizemax: {
+            valType: 'number',
+            dflt: 48,
+            role: 'style',
+            editType: 'calc',
+            description: [
+                'Has an effect only if `marker.size` is set to a numerical array.',
+                'Sets the maximum size (in px) of the rendered marker points.'
+            ].join(' ')
+        },
+        sizedatamin: {
+            valType: 'number',
+            role: 'style',
+            editType: 'calc',
+            description: [
+                'Has an effect only if `marker.size` is set to a numerical array.',
+                'Data values less than or equal to this value will have the minimum allowed symbol size.'
+            ].join(' ')
+        },
+        sizedatamax: {
+            valType: 'number',
+            role: 'style',
+            editType: 'calc',
+            description: [
+                'Has an effect only if `marker.size` is set to a numerical array.',
+                'Data values equal to or greater than what is defined here will have the maximum allowed symbol size.'
+            ].join(' ')
+        },
+        sizedataislog: {
+            valType: 'boolean',
+            dflt: false,
+            role: 'style',
+            editType: 'calc',
+            description: [
+                'Has an effect only if `marker.size` is set to a numerical array.',
+                'Data values are log scale.  They will be converted with Math.log10 before being used for sizing.'
             ].join(' ')
         },
         sizemode: {

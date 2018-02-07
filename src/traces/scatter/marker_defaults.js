@@ -70,6 +70,10 @@ module.exports = function markerDefaults(traceIn, traceOut, defaultColor, layout
         coerce('marker.sizeref');
         coerce('marker.sizemin');
         coerce('marker.sizemode');
+        coerce('marker.sizemax');
+        coerce('marker.sizedatamin');
+        coerce('marker.sizedatamax');
+        coerce('marker.sizedataislog');
     }
 
     if(opts.gradient) {

@@ -121,9 +121,13 @@ module.exports = {
         opacity: scatterMarkerAttrs.opacity,
         maxdisplayed: scatterMarkerAttrs.maxdisplayed,
         size: scatterMarkerAttrs.size,
+        sizemode: scatterMarkerAttrs.sizemode,
         sizeref: scatterMarkerAttrs.sizeref,
         sizemin: scatterMarkerAttrs.sizemin,
-        sizemode: scatterMarkerAttrs.sizemode,
+        sizemax: scatterMarkerAttrs.sizemax,
+        sizedatamin: scatterMarkerAttrs.sizedatamin,
+        sizedatamax: scatterMarkerAttrs.sizedatamax,
+        sizedataislog: scatterMarkerAttrs.sizedataislog,
         line: extendFlat({
             width: scatterMarkerLineAttrs.width,
             editType: 'calc'
